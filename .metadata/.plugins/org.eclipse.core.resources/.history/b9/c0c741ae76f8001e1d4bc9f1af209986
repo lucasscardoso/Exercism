@@ -1,0 +1,18 @@
+package annalyn_Infiltration_program;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		AnnalynInfiltration ann = new AnnalynInfiltration();
+		
+		//annalyn can fast attack?
+		//ann.canFastAttack(true);
+		//ann.canFastAttack(false);
+		
+		
+		ann.canSpy(false, true, false);
+		
+	}
+
+}

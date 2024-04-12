@@ -1,0 +1,52 @@
+package annalyn_Infiltration_program;
+
+public class AnnalynInfiltration {
+	
+	public static boolean canFastAttack(boolean knightIsAwake) {
+			
+			if(knightIsAwake) {
+				System.out.println("no can fast attack");
+			}
+			else {
+				System.out.println("fast attack realese! slash!!!");
+			}
+	        return !knightIsAwake;
+	    }
+	
+	
+	    public static boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
+	    	if(knightIsAwake || archerIsAwake || prisonerIsAwake) {
+	    		System.out.println("you can spy! go");
+	    	}else {
+	    		System.out.println("you cant spy");
+	    	}
+	        return !knightIsAwake || !archerIsAwake || !prisonerIsAwake;
+	    }
+	    
+	    
+	    public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
+	    	
+	    	if(!archerIsAwake && prisonerIsAwake) {
+	    		System.out.println("You can make the bird sign now!");
+	    	}
+	    	else {
+	    		System.out.println("The Archer is awake, is not possible make the bird sing");
+	    	}
+	    	
+	        return prisonerIsAwake && !archerIsAwake;
+	    }
+	    
+	    
+	    public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
+	    	
+	    	if(petDogIsPresent && !archerIsAwake && prisonerIsAwake || !archerIsAwake && !knightIsAwake && prisonerIsAwake) {
+	    		System.out.println("now, you can escape, this the chance!!");
+	    	}else {
+	    		System.out.println("you cant rescue the prisioner");
+	    	}
+	        return (petDogIsPresent && !archerIsAwake) || (prisonerIsAwake && !knightIsAwake && !archerIsAwake);
+	    }
+	    
+	    
+}
+
