@@ -21,7 +21,7 @@ public class Calculator_Conundrum {
 	public void calculate(int operador1, int operador2, String calc) {
 		
 		if (!calc.equals("+") && !calc.equals("-") && !calc.equals("*") && !calc.equals("/")) {
-		    throw new IllegalArgumentException("Operation cannot be " + calc);
+		    throw new IllegalArgumentException("Operation " + calc + " does not exist!");
 		}
 		if(calc.isEmpty()) {
 			throw new IllegalArgumentException("Operation cannot be empty");
